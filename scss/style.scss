@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +10,112 @@
 body{
     background: #151515;
     color: white;
+    font-family: 'NeueMontreal', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: none;
 }
+
+#frame_1{
+    width: 100%;
+    height: 100%;
+    .title{
+        position: absolute;
+        margin: 30px;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+    }
+    h1{
+        font-size: 120px;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transition: clip-path 0.3s ease-in-out;
+    }
+    .divider{
+        height: 5px;
+        background-color: white;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); 
+        transition: clip-path 0.1s ease-in-out;
+    }
+    p{
+        font-size: 24px;
+        margin: 15px 0;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transition: clip-path 0.3s ease-in-out;
+    }
+
+    .click{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 0.2s ease-out;
+        button{
+            padding: 15px;
+            font-size: 24px;
+            height: 150px;
+            width: 150px;
+            background: none;
+            color: white;
+            border: 1px solid white;
+            border-radius: 100%;
+            cursor: none;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+.moveClipPath{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)!important;
+}
+.movedClipPath{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)!important;
+}
+.fadeOut{
+    opacity: 0!important;
+}
+.slideOut{
+    right: 200vw!important;
+}
+.slideIn{
+    right: 0!important;
+}
+
+#frame_2, #frame_3, #frame_4, #frame_5, #frame_6, #frame_7{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: -100vw;
+    transition: right 1s ease-out;
+}
+#frame_2{
+    background-image: url("../assets/angers.jpg");
+}
+#frame_3{
+    background-image: url("../assets/argentique.jpg");
+}
+#frame_4{
+    background-image: url("../assets/facade.jpg");
+}
+#frame_5{
+    background-image: url("../assets/fete_forraine.jpg");
+}
+#frame_6{
+    background-image: url("../assets/marche.jpg");
+}
+#frame_7{
+    background: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=NeueMontreal&display=swap');
