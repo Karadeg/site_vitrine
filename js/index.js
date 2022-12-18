@@ -45,22 +45,22 @@ function startAnimationHomepage () {
     }, 2800);
     setTimeout(function(){
         document.getElementById('frame_2').classList.add('slideOut');
-    }, 3000);
+    }, 4000);
     setTimeout(function(){
         document.getElementById('frame_3').classList.add('slideOut');
-    }, 3200);
+    }, 4200);
     setTimeout(function(){
         document.getElementById('frame_4').classList.add('slideOut');
-    }, 3400);
+    }, 4400);
     setTimeout(function(){
         document.getElementById('frame_5').classList.add('slideOut');
-    }, 3600);
+    }, 4600);
     setTimeout(function(){
         document.getElementById('frame_6').classList.add('slideOut');
-    }, 3800);
+    }, 4800);
     setTimeout(function(){
         document.getElementById('frame_7').classList.add('slideIn');
-    }, 4000);
+    }, 5000);
     
 }
   

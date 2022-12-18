@@ -107,14 +107,16 @@ body {
 
 #frame_2, #frame_3, #frame_4, #frame_5, #frame_6, #frame_7 {
   position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   top: 0;
+  width: 100%;
+  height: 100vh;
   right: -100vw;
-  transition: right 1s ease-out;
+  transition: right 1.8s ease-out;
+}
+#frame_2 img, #frame_3 img, #frame_4 img, #frame_5 img, #frame_6 img, #frame_7 img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100vh;
 }
 
 #frame_2 {
