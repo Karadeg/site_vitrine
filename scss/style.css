@@ -141,4 +141,44 @@ body {
 
 #frame_7 {
   background: white;
+  color: black;
+}
+
+.title_menu_photos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 18rem;
+  opacity: 0.1;
+}
+
+.liste_photos {
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style: none;
+  text-align: right;
+}
+.liste_photos li {
+  opacity: 0.1;
+  font-size: 5rem;
+  transition: all 0.3s;
+}
+.liste_photos li:hover {
+  opacity: 1;
+  font-size: 5.5rem;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 10rem;
+  opacity: 0.1;
+  transition: all 0.3s;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
