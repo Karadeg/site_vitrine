@@ -61,6 +61,13 @@ function startAnimationHomepage () {
     setTimeout(function(){
         document.getElementById('frame_7').classList.add('slideIn');
     }, 5000);
+    setTimeout(function(){
+        document.getElementById('title_menu_photos').classList.add('moveClipPath');
+        document.getElementById('arrow').classList.add('moveClipPath');
+        Array.from(document.getElementsByClassName('list_element')).forEach(element => {
+            element.classList.add('moveClipPath');
+        });
+    }, 7500);
     
 }
   
