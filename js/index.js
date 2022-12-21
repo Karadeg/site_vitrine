@@ -1,12 +1,16 @@
-document.getElementById('click').addEventListener('click', () => {
-    startAnimationHomepage();
-});
-
 const cursor = document.createElement('div');
+var switchMenuBoolean = true;
+
 cursor.style.cssText = 'width:100px;height:100px;border-radius:100%;background:white;position:absolute;transform:translate(-50%,-50%);mix-blend-mode: difference;pointer-events: none;';
 cursor.classList.add('cursor');
 document.body.appendChild(cursor);
 
+document.getElementById('click').addEventListener('click', () => {
+    startAnimationHomepage();
+});
+document.getElementById('arrow').addEventListener('click', () => {
+    switchMenu();
+});
 document.addEventListener('mousemove', (event) => {
     // récupère la position du curseur
     const x = event.clientX;
@@ -16,6 +20,23 @@ document.addEventListener('mousemove', (event) => {
     cursor.style.top = y + 'px';
     cursor.style.left = x + 'px';
 });
+
+function switchMenu(){
+    console.log(switchMenuBoolean)
+    if (!switchMenuBoolean) {
+        document.getElementById('photos_menu').classList.remove('hide_photos_menu');
+        document.getElementById('design_menu').classList.remove('show_design_menu');
+        document.getElementById('arrow').classList.remove('arrow_design');
+        switchMenuBoolean = true;
+        console.log(switchMenuBoolean)
+    } else {
+        document.getElementById('photos_menu').classList.add('hide_photos_menu');
+        document.getElementById('design_menu').classList.add('show_design_menu');
+        document.getElementById('arrow').classList.add('arrow_design');
+        switchMenuBoolean = false;
+        console.log(switchMenuBoolean)
+    }
+}
 
 function startAnimationHomepage () {
     document.getElementById('click_container').classList.add('fadeOut');
